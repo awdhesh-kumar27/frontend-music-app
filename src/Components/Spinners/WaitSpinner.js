@@ -8,7 +8,7 @@ function WaitSpinner(props) {
         <span className="visually-hidden">Loading...</span>
       </Spinner>
       </div>
-      <div className='spinner-text'>Message</div>
+      <div className='spinner-text'>Loading ...</div>
     </div>
   );
 }

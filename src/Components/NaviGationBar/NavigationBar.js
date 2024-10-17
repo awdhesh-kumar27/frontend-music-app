@@ -81,22 +81,22 @@ function NavigationBar(props) {
    ) : ( <div className='nav-bar-div'>
     <Nav variant="" defaultActiveKey="/home">
         <Nav.Item>
-            <Nav.Link href="/Home" style={{ color: 'black' }}>Home</Nav.Link>
+            <Nav.Link href="/Home" style={{ color: 'black' }} className='navi-btn'>Home</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link href="/Playlists" style={{ color: 'black' }}>Playlist</Nav.Link>
+            <Nav.Link   className='navi-btn' href="/Playlists" style={{ color: 'black' }}>Playlist</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link href="/CreatePlaylist" style={{ color: 'black' }}>Create Playlist</Nav.Link>
+            <Nav.Link className='navi-btn' href="/CreatePlaylist" style={{ color: 'black' }}>Create Playlist</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link href="/AddSong" style={{ color: 'black' }}>Add Song</Nav.Link>
+            <Nav.Link className='navi-btn' href="/AddSong" style={{ color: 'black' }}>Add Song</Nav.Link>
         </Nav.Item>
-<<<<<<< HEAD
+
         {Playlists.length > 0 && (
                 <Nav.Item>
                     <div className="dropdown">
-                        <button className="dropbtn">Playlists</button>
+                        <button className="dropbtn">Add to Playlists</button>
                         <div className="dropdown-content">
                             {Playlists.map(({ playlistName, _id }) => (
                                 <a key={_id} href={`/AddSongPlaylist/${_id}`} onClick={(event) => handleLinkClick(event, _id)}>
@@ -107,18 +107,17 @@ function NavigationBar(props) {
                     </div>
                 </Nav.Item>
             )}
-=======
-        <Nav.Item>
+
+        {/* <Nav.Item>
             <div className="dropdown">
-                <button className="dropbtn">Add Song to Playlist</button>
+                <button className="dropbtn">Add to Playlist</button>
                       <div className="dropdown-content">
                         {Playlists.map(({ playlistName, _id }) => (
                           <a key={_id} href={`/AddSongPlaylist/${_id}`}  onClick={(event) => handleLinkClick(event, _id) }>{playlistName}</a>
                         ))}
                   </div>
             </div>
-        </Nav.Item>
->>>>>>> 5a0d5385a2a6d39bc7948b4558d879bcf7052393
+        </Nav.Item> */}
         <div className='logout-button'>
             {/* <Button></Button> */}
             <Button onClick={logoutHandler}>Logout</Button>
