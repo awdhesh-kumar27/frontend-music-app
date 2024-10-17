@@ -1,0 +1,14 @@
+.spinner-div {
+    
+    flex-direction: column;
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    height: 100vh; /* Take up full viewport height */
+    text-align: center; /* Ensure the text inside is centered */
+}
+
+.spinner-text {
+    color: blue;
+    font-size: 25px;
+}
