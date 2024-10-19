@@ -27,8 +27,10 @@ const Login =()=>{
              password : Password
         }
         const res = await loginApi(data,"");
-        console.log(res);
-      
+        // console.log(res);
+        if(res.status == 400){
+              SetMessage("Incorrect Password");
+        }else{
         localStorage.setItem('token', res.data.token);
         SetMessage(res.data.message);
         setToken(res.data.token);
@@ -37,6 +39,7 @@ const Login =()=>{
         Navigate("/Home")
         SetEmail("");
         SetPassword("");
+        }
     }
     useEffect(() => {
         console.log(token); // This will log the token after it has been set
