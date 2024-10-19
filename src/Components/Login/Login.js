@@ -27,10 +27,12 @@ const Login =()=>{
              password : Password
         }
         const res = await loginApi(data,"");
-        console.log(res.data.token);
+        console.log(res);
+      
         localStorage.setItem('token', res.data.token);
         SetMessage(res.data.message);
         setToken(res.data.token);
+        
         console.log(token);
         Navigate("/Home")
         SetEmail("");
